@@ -7,7 +7,8 @@ local lspconfig = require("lspconfig")
 local servers = {
   "cssls",
   "eslint",
-  "tailwindcss", 
+  "tailwindcss",
+  "terraformls",
   "tsserver", 
 }
 
