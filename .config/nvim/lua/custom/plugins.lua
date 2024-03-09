@@ -1,5 +1,9 @@
 local plugins = {
   {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+  {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     opts = function()
@@ -17,8 +21,12 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "black",
         "eslint-lsp",
+        "mypy",
         "prettierd",
+        "pyright",
+        "ruff",
         "tailwindcss-language-server",
         "terraform-ls",
         "typescript-language-server",
