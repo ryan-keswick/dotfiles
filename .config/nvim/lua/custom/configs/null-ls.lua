@@ -5,6 +5,7 @@ local opts = {
   sources = {
     null_ls.builtins.diagnostics.mypy,
     null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.formatting.terraform_fmt,
     null_ls.builtins.diagnostics.ruff
   },
   on_attach = function(client, bufnr)
