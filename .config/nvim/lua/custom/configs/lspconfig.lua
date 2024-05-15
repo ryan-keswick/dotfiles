@@ -10,7 +10,7 @@ local servers = {
   "pyright",
   "tailwindcss",
   "terraformls",
-  "tsserver", 
+  "tsserver",
 }
 
 for _, lsp in ipairs(servers) do

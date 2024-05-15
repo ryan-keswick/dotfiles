@@ -32,11 +32,13 @@ local plugins = {
     opts = {
       ensure_installed = {
         "black",
+        "dockerfile-language-server",
         "eslint-lsp",
         "mypy",
         "prettierd",
         "pyright",
         "ruff",
+        "sqlfmt",
         "tailwindcss-language-server",
         "terraform-ls",
         "typescript-language-server",

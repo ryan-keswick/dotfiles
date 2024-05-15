@@ -3,7 +3,7 @@ local M = {}
 
 M.ui = { 
   changed_themes = {
-    oxocarbon = {
+    mountain = {
       base_30 = {
         white = "#ffffff",
         darker_black = "#000000",
@@ -59,7 +59,7 @@ M.ui = {
     },
   },
 
-  theme = 'oxocarbon' 
+  theme = 'mountain' 
 }
 
 M.plugins = "custom.plugins"
