@@ -15,9 +15,17 @@ brew install \
   docker \
   git \
   jq \
+  postgresql \
   pyenv \
+  moreutils \
+  neovim \
+  nvm \
+  qemu \
   ripgrep \
   starship \
   terraform \
-  neovim \
-  nvm
+  tmux \
+  wget
+
+brew install --cask docker
+brew install --cask slack
