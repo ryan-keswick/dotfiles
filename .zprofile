@@ -31,6 +31,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-source <(wmill completions zsh)
 eval "$(starship init zsh)"
 DOCKER_BUILDKIT=1
