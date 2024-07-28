@@ -29,3 +29,4 @@ brew install \
 
 brew install --cask docker
 brew install --cask slack
+brew install --cask spotify
