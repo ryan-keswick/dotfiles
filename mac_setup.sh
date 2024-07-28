@@ -14,7 +14,7 @@ brew install \
   coreutils \
   ripgrep \
   docker \
-  git \ 
+  git \
   terraform \
   jq \
   neovim
