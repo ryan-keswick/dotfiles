@@ -22,6 +22,7 @@ brew install \
   pyenv \
   moreutils \
   neovim \
+  node \
   nvm \
   qemu \
   ripgrep \
