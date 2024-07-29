@@ -33,3 +33,5 @@ brew install \
 brew install --cask docker
 brew install --cask slack
 brew install --cask spotify
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
