@@ -26,6 +26,7 @@ brew install \
   nvm \
   qemu \
   ripgrep \
+  ruff \
   starship \
   terraform \
   tmux \
