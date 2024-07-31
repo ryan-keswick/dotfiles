@@ -10,6 +10,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew upgrade
 
 brew install \
+  ansible \
   awscli \
   aws-vault \
   bash \

@@ -92,5 +92,10 @@ local plugins = {
       return opts
     end
   },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {},
+  },
 }
 return plugins
