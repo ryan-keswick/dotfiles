@@ -1,9 +1,15 @@
+-- This file needs to have same structure as nvconfig.lua 
+-- https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
+-- Please read that file to know all available options :( 
+
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = { 
+M.base46 = {
+  theme = "mountain",
+
   changed_themes = {
-    mountain = {
+    all = {
       base_30 = {
         white = "#ffffff",
         darker_black = "#000000",
@@ -55,14 +61,9 @@ M.ui = {
         base0D = "#42be65",
         base0E = "#be95ff",
         base0F = "#82cfff",
-      },
-    },
-  },
-
-  theme = 'mountain' 
+      }
+    }
+  }
 }
-
-M.plugins = "custom.plugins"
-M.mappings = require "custom.mappings"
 
 return M
