@@ -1,5 +1,11 @@
 return {
   {
+    "stevearc/conform.nvim",
+    event = 'BufWritePre', -- for format on save
+    opts = require "configs.conform",
+  },
+
+  {
     "christoomey/vim-tmux-navigator",
     cmd = {
       "TmuxNavigateLeft",
@@ -24,37 +30,37 @@ return {
     end,
   },
 
-  {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"bash",
-        "c",
-        "cmake",
-        "css",
-        "dockerfile",
-        "go",
-        "gomod",
-        "gowork",
-        "hcl",
-        "html",
-        "http",
-        "javascript",
-        "json",
-        "lua",
-        "make",
-        "markdown",
-        "python",
-        "regex",
-        "ruby",
-        "rust",
-        "terraform",
-        "tsx",
-        "toml",
-        "vim",
-        "yaml",
-        "zig",
-  		},
-  	},
-  },
+  -- {
+  -- 	"nvim-treesitter/nvim-treesitter",
+  -- 	opts =   {
+  -- 		ensure_installed = {
+  -- 			"bash",
+  --       "c",
+  --       "cmake",
+  --       "css",
+  --       "dockerfile",
+  --       "go",
+  --       "gomod",
+  --       "gowork",
+  --       "hcl",
+  --       "html",
+  --       "http",
+  --       "javascript",
+  --       "json",
+  --       "lua",
+  --       "make",
+  --       "markdown",
+  --       "python",
+  --       "regex",
+  --       "ruby",
+  --       "rust",
+  --       "terraform",
+  --       "tsx",
+  --       "toml",
+  --       "vim",
+  --       "yaml",
+  --       "zig",
+  -- 		},
+  -- 	},
+  -- },
 }

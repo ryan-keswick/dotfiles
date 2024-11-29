@@ -22,3 +22,23 @@ end
 --   on_init = nvlsp.on_init,
 --   capabilities = nvlsp.capabilities,
 -- }
+
+
+local poetry_env = vim.fn.systemlist("poetry env info -p")[1] .. "/bin/python"
+lspconfig.pyright.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    python = {
+      pythonPath = poetry_env,
+      analysis = {
+        typeCheckingMode = "strict",
+        autoSearchPaths = true,
+        useLibraryCodeForTypes = true,
+        diagnosticMode = "openFilesOnly", -- Ensures only open files are analyzed
+        logLevel = "Information", -- Optional: Increase logging verbosity
+      }
+    }
+  }
+}
