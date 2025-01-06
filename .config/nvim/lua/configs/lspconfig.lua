@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls" }
+local servers = { "html", "cssls", "marksman" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -22,7 +22,23 @@ end
 --   on_init = nvlsp.on_init,
 --   capabilities = nvlsp.capabilities,
 -- }
+--
 
+-- require("lspconfig").marksman.setup {}
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*.md" },
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
+
+require("lspconfig").terraformls.setup {}
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*.tf", "*.tfvars" },
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
 
 local poetry_env = vim.fn.systemlist("poetry env info -p")[1] .. "/bin/python"
 lspconfig.pyright.setup {
@@ -38,7 +54,7 @@ lspconfig.pyright.setup {
         useLibraryCodeForTypes = true,
         diagnosticMode = "openFilesOnly", -- Ensures only open files are analyzed
         logLevel = "Information", -- Optional: Increase logging verbosity
-      }
-    }
-  }
+      },
+    },
+  },
 }
