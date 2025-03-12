@@ -10,7 +10,7 @@ wget
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zshrc
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew upgrade
@@ -62,7 +62,8 @@ brew install ansible \
   xz \
   zstd
 
-brew install --cask slack \
+brew install --cask \
+  slack \
   spotify \
   docker
 
@@ -84,3 +85,10 @@ echo "JetBrains Mono Nerd Font installed!"
 echo "Installing Neovim config..."
 mkdir .p "$HOME/.config/nvim"
 cp -r "$HOME/dotfiles/.config/nvim" "$HOME/.config/"
+
+echo "installing NPM and node 20"
+nvm install 20
+
+echo "Copying config files"
+cat ./.zshrc >> ~/.zshrc
+cat ./.vimrc >>~/.vimrc
