@@ -49,5 +49,3 @@ o.updatetime = 250
 
 -- bufferline.nvim
 o.termguicolors = true
-
-vim.opt.fillchars = { eob = " " } -- Enable true color support in the terminal (Required for many themes)

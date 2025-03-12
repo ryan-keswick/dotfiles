@@ -2,6 +2,7 @@ local map = vim.keymap.set
 
 -- nvimtree
 map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
+map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window" })
 
 -- telescope
 map("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
@@ -28,3 +29,6 @@ end, { desc = "buffer close" })
 -- Comment
 map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
+
+-- Use Esc to turn off search highlighting
+map("n", "<Esc>", "<cmd> :noh <CR>")

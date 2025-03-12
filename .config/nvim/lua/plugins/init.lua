@@ -1,8 +1,6 @@
 return {
   "nvim-lua/plenary.nvim",
 
-  { "nvim-tree/nvim-web-devicons", lazy = true },
-
   {
     "nvchad/ui",
     lazy = false,
@@ -48,8 +46,10 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-    opts = {},
+    opts = require "plugins.configs.nvimtree"
   },
+
+  { "nvim-tree/nvim-web-devicons", lazy = true },
 
   {
     "nvim-treesitter/nvim-treesitter",
