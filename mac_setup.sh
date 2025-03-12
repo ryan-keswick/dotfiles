@@ -8,13 +8,9 @@ wget
 # https://alacritty.org/
 # https://docs.docker.com/desktop/release-notes/
 
-hdiutil attach Docker.dmg
-/Volumes/Docker/Docker.app/Contents/MacOS/install
-hdiutil detach /Volumes/Docker
-
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/ryankeswick/.zprofile
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew upgrade
@@ -22,7 +18,7 @@ brew install ansible \
   aspell \
   bash \
   btop \
-  buildkite-agent \
+  buildkite/buildkite/buildkite-agent \
   coreutils \
   docker \
   gh \
@@ -86,4 +82,5 @@ rm /tmp/jbm.zip
 echo "JetBrains Mono Nerd Font installed!"
 
 echo "Installing Neovim config..."
+mkdir .p "$HOME/.config/nvim"
 cp -r "$HOME/dotfiles/.config/nvim" "$HOME/.config/"
