@@ -52,14 +52,13 @@ brew install ansible \
   sqlite \
   starship \
   telnet \
-  terraform \
-  terraform-docs \
   tflint \
   tmux \
   tree \
   watch \
   wget \
   xz \
+  zlib \
   zstd
 
 brew install --cask \
@@ -92,3 +91,14 @@ nvm install 20
 echo "Copying config files"
 cat ./.zshrc >> ~/.zshrc
 cat ./.vimrc >>~/.vimrc
+
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+sudo installer -pkg AWSCLIV2.pkg -target /
+mkdir ~/.aws
+
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+brew install terraform-docs
+
+pyenv install 3.12
+pyenv global 3.12
