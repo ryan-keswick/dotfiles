@@ -15,3 +15,5 @@ eval "$(pyenv init - zsh)"
 
 eval "$(starship init zsh)"
 DOCKER_BUILDKIT=1
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
