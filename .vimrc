@@ -8,9 +8,3 @@ set shiftwidth=4
 set expandtab
 set re=0
 
-call plug#begin()
-
-Plug 'rust-lang/rust.vim'
-
-call plug#end()
-
