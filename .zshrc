@@ -27,3 +27,7 @@ fi
 DOCKER_BUILDKIT=1
 ZSH_THEME=""
 eval "$(starship init zsh)"
+# BEGIN ANSIBLE MANAGED BLOCK - starship
+eval "$(starship init zsh)"
+# END ANSIBLE MANAGED BLOCK - starship
+export PATH=/home/coder/.local/bin:$PATH
