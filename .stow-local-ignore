@@ -1,0 +1,26 @@
+# Presence of this file disables stow's built-in default ignore list, so the
+# defaults are replicated below. The only project-specific addition is
+# AGENTS.md: it also ships in the `home` stow package and both target
+# ~/AGENTS.md, so stowing this package aborted with a conflict. Ignore it here
+# (the `home` package owns ~/AGENTS.md); the file still lives in this repo.
+
+# --- stow default ignore list ---
+RCS
+.+,v
+CVS
+\.\#.+
+\.cvsignore
+\.svn
+_darcs
+\.hg
+\.git
+\.gitignore
+\.gitmodules
+.+~
+\#.*\#
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# --- project-specific ---
+^/AGENTS\.md$
