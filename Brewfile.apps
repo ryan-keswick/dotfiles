@@ -1,0 +1,3 @@
+cask "slack"
+cask "spotify"
+cask "docker-desktop"
