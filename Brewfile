@@ -1,5 +1,5 @@
-tap "buildkite/buildkite"
-tap "hashicorp/tap"
+tap "buildkite/buildkite", trusted: true
+tap "hashicorp/tap", trusted: true
 
 brew "ansible"
 brew "aspell"
