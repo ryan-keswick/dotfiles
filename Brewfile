@@ -49,4 +49,5 @@ brew "xz"
 brew "zlib"
 brew "zstd"
 
+cask "antigravity-cli"
 cask "font-jetbrains-mono-nerd-font"
